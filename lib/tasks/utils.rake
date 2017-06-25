@@ -2,8 +2,9 @@ namespace :utils do
   desc "Preencer ou popular banco de dados"
   task seed: :environment do
     puts "Gerando contatos (Contact)..."
-    10.times do |i|
-        Contact.create!([
+    count = 0
+    100.times do |i|
+        contato = Contact.create!([
             {
                 name: Faker::Name.name,
                 email: Faker::Internet.email,
@@ -11,9 +12,11 @@ namespace :utils do
                 kind: Kind.all.sample,
             }
         ])
+        puts "Contato: #{contato[0].name} criado com sucesso!" 
+        count += 1
     end
-    puts "Gerando contatos (Contact)...[OK]"
-
+    puts "\n\nGerado #{count} contatos (Contact)...[OK]"
+    
     puts "Gerando endereços (Addresses)..."
       Contact.all.each do |contact|
         Address.create!([

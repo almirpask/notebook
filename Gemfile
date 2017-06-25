@@ -8,6 +8,14 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+end
+# i18n for kaminari
+gem 'kaminari-i18n'
+#Gem kaminari e uma gem que pertime o uso de paginacao
+gem 'kaminari'
 #gem pra formularios dinamicos usando Jquery
 gem "cocoon"
 # Faker e uma gem para geracao de nomes

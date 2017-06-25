@@ -1,9 +1,14 @@
-<h1>Seja bem-vindo!</h1>
+<dvi class="basic-grey">
+    <h1>Seja bem-vindo! <%= t("hello")%></h1>
+    <ul>
+        <li><%= link_to "Tipos", kinds_path%></li>
+        <li><%= link_to "Contacts", contacts_path%></li>
+        <!--li><%= link_to "Address", addresses_path%></li>
+        <li><%= link_to "Phones", phones_path%></li>
+        <li-><%= link_to "Phones", phones_path, remote: true%></li-->
+    </ul>
+</dvi>
+    
 
-<ul>
-    <li><%= link_to "Tipos", kinds_path%></li>
-    <li><%= link_to "Contacts", contacts_path%></li>
-    <li><%= link_to "Address", addresses_path%></li>
-    <li><%= link_to "Phones", phones_path%></li>
-</ul>
-<p>Find me in app/views/home/index.html.erb</p>
+    
+
